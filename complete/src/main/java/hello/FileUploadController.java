@@ -61,7 +61,6 @@ public class FileUploadController {
                     "You can't upload " + file.getOriginalFilename() + "!");
             return "redirect:/";
         }
-
     }
 
     @ExceptionHandler(StorageFileNotFoundException.class)
