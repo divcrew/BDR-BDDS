@@ -71,7 +71,6 @@ public class FileUploadController {
     }
 
     private static String getFileExtension(MultipartFile f) {
-        File file = (File) f;
         String fileName = f.getName();
 
         if (fileName.lastIndexOf(".") != -1 && fileName.lastIndexOf(".") != 0) {
