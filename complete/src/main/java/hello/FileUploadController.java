@@ -55,7 +55,6 @@ public class FileUploadController {
             storageService.store(file);
             redirectAttributes.addFlashAttribute("message",
                     "You successfully uploaded " + file.getOriginalFilename() + "!");
-
             return "redirect:/";
         } else {
             redirectAttributes.addFlashAttribute("message",
@@ -72,7 +71,6 @@ public class FileUploadController {
 
     private static String getFileExtension(MultipartFile f) {
         String fileName = f.getName();
-
         if (fileName.lastIndexOf(".") != -1 && fileName.lastIndexOf(".") != 0) {
             return fileName.substring(fileName.lastIndexOf(".") + 1);
         } else {
